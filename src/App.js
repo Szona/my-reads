@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import Search from './components/Search'
 import Library from './components/Library'
-import { Route } from 'react-router-dom'
+import {HashRouter, Route } from 'react-router-dom'
 import * as BooksAPI from './BooksAPI'
 
 
@@ -29,10 +29,10 @@ class BooksApp extends Component {
   render() {
     return (
       <div className="app">
-        <Route exact path="/" render={() => (
+        <Route exact path=path={`${process.env.PUBLIC_URL}/`}  render={() => (
           <Library handler={this.updateParent} books={this.state.books}/>
         )}/>
-        <Route path="/search" render={() => (
+        <Route path={`${process.env.PUBLIC_URL}/search`} render={() => (
           <Search handler={this.updateParent} books={this.state.books}/>
         )}/>
       </div>
