@@ -29,10 +29,10 @@ class BooksApp extends Component {
   render() {
     return (
       <div className="app">
-        <Route exact path=path={`${process.env.PUBLIC_URL}/`}  render={() => (
+        <Route exact path="/"  render={() => (
           <Library handler={this.updateParent} books={this.state.books}/>
         )}/>
-        <Route path={`${process.env.PUBLIC_URL}/search`} render={() => (
+        <Route path="/search" render={() => (
           <Search handler={this.updateParent} books={this.state.books}/>
         )}/>
       </div>
